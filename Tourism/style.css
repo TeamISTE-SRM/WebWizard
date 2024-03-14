@@ -1,0 +1,92 @@
+body,html{
+    margin:0;
+    Padding:0;
+    
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+#Back-vid{
+    position: absolute;
+   top:0;
+   left:0;
+   Height:100%;
+   width:100%;
+    background-color: black;
+    opacity: 1;
+    
+
+}
+.Tourist_places{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
+
+
+}
+.text
+{
+    position: absolute;
+    top: 50%; /* Adjust vertical position */
+    left: 50%; /* Adjust horizontal position */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight:500;
+    font: buffalobold;
+    transition: transform 0.3s ease-out;
+}
+
+
+
+/* Hide default video controls */
+#Back-vid::-webkit-media-controls {
+    display: none !important;
+}
+#Back-vid::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+#Back-vid::-webkit-media-controls-panel {
+    display: none !important;
+}
+#Back-vid::-webkit-media-controls-play-button {
+    display: none !important;
+}
+#Back-vid::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+#Back-vid::-webkit-media-controls-current-time-display {
+    display: none !important;
+}
+#Back-vid::-webkit-media-controls-time-remaining-display {
+    display: none !important;
+}
+#Back-vid::-webkit-media-controls-mute-button {
+    display: none !important;
+}
+#Back-vid::-webkit-media-controls-toggle-closed-captions-button {
+    display: none !important;
+}
+#Back-vid::-webkit-media-controls-toggle-fullscreen-button {
+    display: none !important;
+}
