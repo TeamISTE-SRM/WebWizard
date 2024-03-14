@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans" , sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(211, 178, 184);
+}
+
+.jap-section{
+    background: url(../assets/images/jap.jpg) no-repeat left;
+    background-size: 60%;
+    background-color:rgb(211, 178, 184) ;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: rgb(211, 178, 184);
+    padding: 150px;
+    
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;   
+}
+
+.inner-container p{
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: rgb(82, 34, 34);
+}

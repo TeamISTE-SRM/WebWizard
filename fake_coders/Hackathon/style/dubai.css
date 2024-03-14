@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans" , sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 9, 13);
+}
+
+.dubai{
+    background: url(../assets/images/dubai.jpg) no-repeat left;
+    background-size: 60%;
+    background-color:rgb(31, 9, 13);
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: rgb(31, 9, 13);
+    padding: 150px;
+    
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;   
+    color: rgb(201, 184, 184);
+}
+
+
+.inner-container p{
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: rgb(201, 184, 184);
+}
