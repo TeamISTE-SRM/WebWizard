@@ -1,0 +1,702 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Packages</title>
+</head>
+<style>
+        *{
+        box-sizing: border-box;
+    }
+    body{
+      background-image: url("image/background2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px 30px;
+    font-size: 17px;
+    padding: 10px;
+    overflow: hidden;
+}
+.container{
+    background: transparent;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightblue;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 15px 0px #fff;
+}
+    nav{
+background-color: #817e84;
+overflow: hidden;
+display: block;
+}
+nav a{
+box-shadow: inset 0 0 0 0 #54b3d6;
+text-decoration: none;
+float: right;
+padding: 10px 30px;
+color: white;
+gap: 20px;
+transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+nav a:hover{
+box-shadow: inset 200px 0 0 0 #54b3d6;
+cursor: pointer;
+}
+.logo{
+  float: left;
+  transition: none;
+  font-family: "Permanent Marker", cursive;
+}
+.logo:hover{
+  box-shadow: none;
+}
+.img-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    clip-path: circle(43%);
+    float: right;
+    width: 300px;
+    height: 300px;
+}
+input, select{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+}
+button{
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #243c47;
+    color: white;
+}
+button:hover{
+    background-color: #2a98cb;
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.icon1{
+    font-size: 20px;
+   }
+   .slider-container {
+    height: 27rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  position: relative;
+}
+
+.left-arrow,
+.right-arrow {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.slider-content {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+  perspective: 100px;
+}
+.slider-content .slide {
+  position: absolute;
+  left: 50%;
+  height: 24rem;
+  width: 1rem;
+  min-width: 270px;
+  background: #999;
+  border-radius: 25px;
+  z-index: 0;
+/*   opacity: 0; */
+  transform: translate(-50%, 0) rotateY(0deg) scale(1,1);
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, left 0.5s ease-in-out,
+    z-index 0s 0.25s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.slide.position-1 {
+  left: 20% !important;
+  z-index: 1 !important;
+  transform: translate(-50%, 0) rotateY(-2deg) scale(0.8, 0.8) !important;
+  opacity: 1 !important;
+  box-shadow: 0px 0.4rem 1.6rem rgba(0, 0, 0, 0.1) !important;
+  
+}
+.slide.position-2 {
+  left: 35% !important;
+  z-index: 2 !important;
+  transform: translate(-50%, 0) rotateY(-1deg) scale(0.9, 0.9) !important;
+  opacity: 1 !important;
+  box-shadow: 0px 0.4rem 1.6rem rgba(0, 0, 0, 0.3) !important;
+  
+}
+.slide.position-3 {
+  left: 50% !important;
+  z-index: 4 !important;
+  transform: translate(-50%, 0) rotateY(0deg) scale(1, 1) !important;
+  opacity: 1 !important;
+  box-shadow: 0px 0.4rem 1.6rem rgba(0, 0, 0, 0.5) !important;
+  cursor: pointer;
+}
+.slide.position-3:hover {
+  box-shadow: 0px 0rem 1.8rem rgba(0, 0, 0, 0.7) !important;
+  transform: translate(-50%, 0) rotateY(0deg) scale(1.05, 1.05) !important;
+}
+.slide.position-4 {
+  left: 65% !important;
+  z-index: 2 !important;
+  transform: translate(-50%, 0) rotateY(1deg) scale(0.9, 0.9) !important;
+  opacity: 1 !important;
+  box-shadow: 0px 0.4rem 1.6rem rgba(0, 0, 0, 0.3) !important;
+/*   animation: center-animation 1s 1s linear 1 forwards; */
+}
+@keyframes center-animation{
+  0%{
+    left: 70% !important;
+    transform: translate(-50%, 0) rotateY(1deg) scale(0.9, 0.9) !important;
+  }
+  50%{
+    left: 75% !important;
+    transform: translate(-50%, 0) rotateY(-2deg) scale(1.1, 1.1) !important;
+  }
+  100%{
+    left: 50% !important;
+    transform: translate(-50%, 0) rotateY(0deg) scale(1, 1) !important;
+  }
+}
+.slide.position-5 {
+  left: 80% !important;
+  z-index: 1 !important;
+  transform: translate(-50%, 0) rotateY(2deg) scale(0.8, 0.8) !important;
+  opacity: 1 !important;
+  box-shadow: 0px 0.4rem 1.6rem rgba(0, 0, 0, 0.1) !important;
+  
+}
+
+.slide.position-none{
+   left: 50%;
+  z-index: 0;
+  transform: translate(-50%, 0) rotateY(0deg) scale(0.7, 0.7);
+  opacity: 1;
+  box-shadow: 0px 0.4rem 1.6rem rgba(0, 0, 0, 0);
+}
+
+.slider-container i{
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider-container .left-arrow:hover i, .slider-container .right-arrow:hover i{
+  background: rgba(127, 195, 228, 0.1);
+  color: #273fdc;
+}
+
+
+.slider-content .slide .card-sections .upper-section{
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.slider-content .slide.position-3 .card-sections .upper-section{
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.slide > *{
+  color: white;
+  font-family: 'Inter';
+  font-size: 90%;
+  letter-spacing: -0.001em;
+}
+
+.media, .card-sections{
+  
+  position: absolute;
+  top: -12;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  
+  border-radius: 25px;
+  overflow: hidden;
+}
+.media{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media img{
+  position: absolute;
+  height: 23rem;
+}
+
+.card-sections{
+  
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.upper-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.upper-section .wishlist, .upper-section .cart{
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out ;
+}
+.upper-section .cart:hover{
+  color: rgb(252, 163, 60);
+  background: rgba(0,0,0,0.4);
+} 
+.upper-section .wishlist:hover{
+  color: rgb(244, 129, 129);
+  background: rgba(0,0,0,0.4);
+}
+
+@media only screen and (max-width: 900px) {
+    nav a{
+        float: left;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 900px){
+    img{
+        position: fixed;
+        bottom: 10px;
+        left: 150px;
+    }
+    .container{
+        height: 90%;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 500px){
+    body{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+.nav-icon{
+    display: none;
+   }
+   @media  screen and (max-width:600px) {
+    .topnav a:not(:first-child){display:none;}
+    .topnav a.nav-icon{
+      float:right!important;
+      display: block;
+    }
+   }
+   @media screen and (max-width:600px){
+    .topnav.responsive {
+      position: relative;
+    }
+    .topnav.responsive a.nav-icon{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a{
+      float: none;
+      display: block;
+      text-align: left;
+    }
+   }
+</style>
+<header>
+  <nav class="topnav" id="topnav">
+        <a class="logo"><b>VOYAGERS <i class="bi bi-geo-alt icon1"></i></b></a>
+        <a href="places.html#contact">Contact Us</a>
+        <a href="booking.html">Booking</a>
+        <a href="tour.html">Packages</a>
+        <a href="login-register.html">Login/sign-in</a>
+        <a href="places.html">Places</a>
+        <a href="index.html">Home</a>
+        <a href="javascript:void(0);" class="nav-icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    </nav>
+</header>
+<body>
+  <img class="img-logo" src="https://img.freepik.com/free-vector/flat-vintage-travel-background_23-2148189177.jpg?size=338&ext=jpg&ga=GA1.2.364564762.1677505256&semt=ais">
+    <div class="container">
+    <form action="/tour" method="post">
+        <h1>Search For Available Packages</h1>
+        <p>Place: <select name="place" id="place" required>
+            <option value="">--Select a Place--</option>
+            <option value="goa">Goa</option>
+            <option value="Kerala">Kerala</option>
+            <option value="varanasi">Varanasi</option>
+            <option value="udaipur">Udaipur</option>
+            <option value="kashmir">Kashmir</option>
+            <option value="darjeeling">Darjeeling</option>
+            <option value="manali">Manali</option>
+            <option value="shimla">Shimla</option>
+            <option value="ladakh">Ladakh</option>
+            <option value="jaipur">Jaipur</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+        </select></p>
+        <p>From Date: <input type="date" name="from_date" id="from_date" required></p>
+        <p>Till Date: <input type="date" name="till_date" id="till_date" required></p>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+<div class="slider-container">
+    <div class="left-arrow"><i class="fa fa-angle-left" style="font-size:24px"></i></div>
+    <div class="slider-content" id='slider-content'>
+      <div class='slide'>
+        <div class="media">
+          <img src="image/ap.jpeg" alt="">
+        </div>
+        <div class="card-sections">
+          
+          <div class="upper-section">
+            <div class="wishlist"><i class="fa fa-heart"></i></div>
+            <div class="cart"><i class="fa fa-cart-plus"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class='slide'>
+        <div class="media">
+          <img src="image/Gujarat.jpeg" alt="">
+        </div>
+        <div class="card-sections">
+          <div class="upper-section">
+            <div class="wishlist"><i class="fa fa-heart"></i></div>
+            <div class="cart"><i class="fa fa-cart-plus"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class='slide'>
+        <div class="media">
+          <img src="image/HP.jpeg" alt="">
+        </div>
+        <div class="card-sections">
+          <div class="upper-section">
+            <div class="wishlist"><i class="fa fa-heart"></i></div>
+            <div class="cart"><i class="fa fa-cart-plus"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class='slide'>
+        <div class="media">
+          <img src="image/jaipur.jpeg" alt="">
+        </div>
+        <div class="card-sections">
+          <div class="upper-section">
+            <div class="wishlist"><i class="fa fa-heart"></i></div>
+            <div class="cart"><i class="fa fa-cart-plus"></i></div>
+          </div>
+        </div>
+          
+        </div>
+      <div class='slide'>
+        <div class="media">
+          <img src="image/Ladakh.jpeg" alt="">
+        </div>
+        <div class="card-sections">
+          
+          <div class="upper-section">
+            <div class="wishlist"><i class="fa fa-heart"></i></div>
+            <div class="cart"><i class="fa fa-cart-plus"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class='slide'>
+        <div class="media">
+          <img src="image/punjab.jpeg" alt="">
+        </div>
+        <div class="card-sections">
+          <div class="upper-section">
+            <div class="wishlist"><i class="fa fa-heart"></i></div>
+            <div class="cart"><i class="fa fa-cart-plus"></i></div>
+          </div>
+        </div></div>
+
+    </div>
+    <div class="right-arrow"><i class="fa fa-angle-right" style="font-size:24px"></i></div>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+  <script>
+    // This slider is for atleast 5 numbers of slides to n numbers of slides
+// you can go through by clicking left or right button or swipe left or right
+
+var sliders = document.querySelectorAll(".slide");
+var center = Math.floor(sliders.length / 2);
+var leftEndBack = center - 3 >= 0? center - 3 : undefined;
+var leftEnd = center - 2 >= 0? center - 2 : undefined;
+var leftMid = center - 1 >= 0? center - 1 : undefined;
+var rightMid = center + 1 < sliders.length? center + 1 : undefined;
+var rightEnd = center + 2 < sliders.length? center + 2 : undefined;
+var rightEndBack = center + 3 < sliders.length? center + 3 : undefined;
+let touchstartX = 0
+let touchendX = 0
+let container = document.getElementById('slider-content');
+
+if (leftEndBack != undefined) sliders[leftEndBack].classList.add("position-none");
+if (leftEnd != undefined) sliders[leftEnd].classList.add("position-1");
+if (leftMid != undefined) sliders[leftMid].classList.add("position-2");
+if (center != undefined) sliders[center].classList.add("position-3");
+if (rightMid != undefined) sliders[rightMid].classList.add("position-4");
+if (rightEnd != undefined) sliders[rightEnd].classList.add("position-5");
+if (rightEndBack != undefined) sliders[rightEndBack].classList.add("position-none");
+
+if (sliders.length > 0) $('.slide').addClass('position-none');
+
+
+function leftScroll(){
+  
+  if(leftEndBack != undefined){
+    sliders[leftEndBack].classList.remove("position-none");
+    sliders[leftEndBack].classList.add("position-1");
+  }
+  else{
+    sliders[rightEnd].classList.remove("position-none");
+    sliders[rightEnd].classList.add("position-1");
+  }
+  
+  if(leftEnd != undefined){
+    sliders[leftEnd].classList.remove("position-1");
+    sliders[leftEnd].classList.add("position-2");
+  }
+  
+  if(leftMid != undefined){
+    sliders[leftMid].classList.remove("position-2");
+    sliders[leftMid].classList.add("position-3");
+  }
+  
+  if(center != undefined){
+    sliders[center].classList.remove("position-3");
+    sliders[center].classList.add("position-4");
+  }
+  
+  if(rightMid != undefined){
+    sliders[rightMid].classList.remove("position-4");
+    sliders[rightMid].classList.add("position-5");
+  }
+  
+  if(rightEnd != undefined){
+    sliders[rightEnd].classList.remove("position-5");
+    sliders[rightMid].classList.add("position-none");
+  }
+  
+  leftEndBack != undefined ? leftEndBack-- : leftEndBack;
+  leftEnd != undefined? leftEnd-- : leftEnd;
+  leftMid != undefined? leftMid-- : leftMid;
+  center != undefined? center-- : center;
+  rightMid != undefined? rightMid-- : rightMid;
+  rightEnd != undefined? rightEnd-- : rightEnd;
+  rightEndBack != undefined ? rightEndBack-- : rightEndBack;
+  
+  if(leftEndBack != undefined && leftEndBack == -1)
+    leftEndBack = sliders.length - 1;
+  if(leftEnd != undefined && leftEnd == -1)
+    leftEnd = sliders.length - 1;
+  if(leftMid != undefined && leftMid == -1)
+    leftMid = sliders.length - 1;
+  if(center != undefined && center == -1)
+    center = sliders.length - 1;
+  if(rightMid != undefined && rightMid == -1)
+    rightMid = sliders.length - 1;
+  if(rightEnd != undefined && rightEnd == -1)
+    rightEnd = sliders.length - 1;
+  if(rightEndBack != undefined && rightEndBack == -1)
+    rightEndBack = sliders.length - 1;
+}
+
+function rightScroll(){
+  
+  if(leftEnd != undefined){
+    sliders[leftEnd].classList.remove("position-1");
+    sliders[leftEnd].classList.add("position-none");
+  }  
+  if(leftMid != undefined){
+    sliders[leftMid].classList.remove("position-2");
+    sliders[leftMid].classList.add("position-1");
+  }  
+  if(center != undefined){
+    sliders[center].classList.remove("position-3");
+    sliders[center].classList.add("position-2");
+  }  
+  if(rightMid != undefined){
+    sliders[rightMid].classList.remove("position-4");
+    sliders[rightMid].classList.add("position-3");
+  }  
+  if(rightEnd != undefined){
+    sliders[rightEnd].classList.remove("position-5");
+    sliders[rightEnd].classList.add("position-4");
+  }
+  if(rightEndBack != undefined){
+    sliders[rightEndBack].classList.remove("position-none");
+    sliders[rightEndBack].classList.add("position-5");
+  }
+  else if(leftEndBack != undefined){
+    sliders[leftEndBack].classList.remove("position-none");
+    sliders[leftEndBack].classList.add("position-5");
+  }
+  else{
+    sliders[leftEnd].classList.remove("position-none");
+    sliders[leftEnd].classList.add("position-5");
+  }
+  
+  leftEndBack != undefined? leftEndBack++ : leftEndBack;
+  leftEnd != undefined? leftEnd++ : leftEnd;
+  leftMid != undefined? leftMid++ : leftMid;
+  center != undefined? center++ : center;
+  rightMid != undefined? rightMid++ : rightMid;
+  rightEnd != undefined? rightEnd++ : rightEnd;
+  rightEndBack != undefined? rightEndBack++ : rightEndBack;
+
+  if(leftEndBack != undefined && leftEndBack == sliders.length)
+    leftEndBack = 0;
+  if(leftEnd != undefined && leftEnd == sliders.length)
+    leftEnd = 0;
+  if(leftMid != undefined && leftMid == sliders.length)
+    leftMid = 0;
+  if(center != undefined && center == sliders.length)
+    center = 0;
+  if(rightMid != undefined && rightMid == sliders.length)
+    rightMid = 0;
+  if(rightEnd != undefined && rightEnd == sliders.length)
+    rightEnd = 0;
+  if(rightEndBack != undefined && rightEndBack == sliders.length)
+    rightEndBack = 0;
+}
+
+class Swipe {
+    constructor(element) {
+        this.xDown = null;
+        this.yDown = null;
+        this.element = typeof(element) === 'string' ? document.querySelector(element) : element;
+
+        this.element.addEventListener('touchstart', function(evt) {
+            this.xDown = evt.touches[0].clientX;
+            this.yDown = evt.touches[0].clientY;
+        }.bind(this), false);
+
+    }
+
+    onLeft(callback) {
+        this.onLeft = callback;
+
+        return this;
+    }
+
+    onRight(callback) {
+        this.onRight = callback;
+
+        return this;
+    }
+
+    handleTouchMove(evt) {
+        if ( ! this.xDown || ! this.yDown ) {
+            return;
+        }
+
+        var xUp = evt.touches[0].clientX;
+        var yUp = evt.touches[0].clientY;
+
+        this.xDiff = this.xDown - xUp;
+        this.yDiff = this.yDown - yUp;
+
+        if ( Math.abs( this.xDiff ) > Math.abs( this.yDiff ) ) { 
+            if ( this.xDiff > 0 ) {
+                this.onLeft();
+            } else {
+                this.onRight();
+            }
+        } else {
+            if ( this.yDiff > 0 ) {
+                this.onUp();
+            } else {
+                this.onDown();
+            }
+        }
+
+        this.xDown = null;
+        this.yDown = null;
+    }
+
+    run() {
+        this.element.addEventListener('touchmove', function(evt) {
+            this.handleTouchMove(evt).bind(this);
+        }.bind(this), false);
+    }
+}
+
+var swiper = new Swipe(container);
+
+
+//left scroll
+$(".left-arrow").on("click", leftScroll);
+
+swiper.onRight(function () {
+  leftScroll();
+});
+swiper.run();
+
+// $(".position-2").on("click", function(){
+//   leftScroll();
+// });
+
+// $(".position-1").on("click", function(){
+//   leftScroll();
+//   leftScroll();
+// });
+
+
+
+// right scroll
+$(".right-arrow").on("click", rightScroll);
+
+swiper.onLeft(function () {
+  rightScroll();
+});
+swiper.run();
+
+// $(".position-4").on("click", function(){
+//   rightScroll();
+// });
+
+// $(".position-5").on("click", function(){
+//   rightScroll();
+//   rightScroll();
+// });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
