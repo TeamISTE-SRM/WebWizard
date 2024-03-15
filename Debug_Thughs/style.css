@@ -225,6 +225,13 @@ font-size: 20px;
   text-align: center;
   opacity: 65%;
 }
+.services-icon:hover{
+  color: #1F252E;
+  
+  background-color: #00f8aa;
+  box-shadow: 0 0 10px #00f8aa;
+  transition: all .3s ease-in-out;
+}
 .social {
   display: flex;
   flex-wrap: wrap;
